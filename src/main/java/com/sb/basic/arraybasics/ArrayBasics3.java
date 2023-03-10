@@ -14,8 +14,8 @@ public class ArrayBasics3 {
 		// ar.copyonearrayToanotherarray();
 		// ar.reversethe_arrayelementinsamearray();
 
-		// ar.removingAllDuplicateElementInGivenArray();
-		 ar.notRepeatedElementinGivenArray();
+		 ar.removingAllDuplicateElementInGivenArray();
+		 //ar.notRepeatedElementinGivenArray();
 		//ar.notRepeatedElementinGivenArray_1();
 	}
 

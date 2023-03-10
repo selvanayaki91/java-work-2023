@@ -8,7 +8,7 @@ public class ArrayBasics2 {
        //arr.finding_of_givenNum();
        //arr.finding_bigNum();
        //arr.finding_smallNum();
-      arr.first_two_big_Number();
+     // arr.first_two_big_Number();
       // arr.first_two_small_Number();
       // arr.total_of_odd_values();
        //arr.total_of_odd_indexed_values();
@@ -21,8 +21,227 @@ public class ArrayBasics2 {
        //arr.moving_all_right//();
      //  arr.copyinggivenarrayInReverseinsamearray();
       // arr.sumOf2Elementsincorrespondingarray10();
+      //arr.first_2_big_number();
+      //arr.wrapper_class_methods();
+       //arr.odd_numbersGivenArray();
+       //arr.even_numbersgivenArray();
+      //int result= arr.primeNumber(13);
+      //arr.printPrimeNumIngivenArray();
+      //arr.printallnumberisPrimeNumGivenArray();
+      
+     // int result= arr.perfectNum(6);
+      //System.out.println(result);
+       arr.givenarrayElementisAnyElementPerfectNumbers();
+       //arr.evenElementinOddIndex();
+       //arr.oddElementinEvenIndex();
        
-       
+	}
+
+	private void oddElementinEvenIndex() {
+		// TODO Auto-generated method stub
+		int[] ar = {17,11,20,12,1,};
+		for(int i=0;i<ar.length;i++)
+		{
+			if(i%2==0 &&ar[i]%2!=0)
+			{
+				System.out.println(ar[i]);
+			}
+		}
+		
+	}
+
+	private void evenElementinOddIndex() {
+		// TODO Auto-generated method stub
+		int[] ar = {17,11,20,12,1,};
+		for(int i=0;i<ar.length;i++)
+		{
+			if(i%2!=0 &&ar[i]%2==0)
+			{
+				System.out.println(ar[i]);
+			}
+		}
+		
+	}
+
+	private void givenarrayElementisAnyElementPerfectNumbers() {
+		// TODO Auto-generated method stub
+		int[] ar = {3,6,7,8,9,28,8128};
+		
+		int count=0;
+		
+		int i;
+		for( i=0;i<ar.length;i++)
+		{
+			//int result=perfectNum(ar[i]);
+			if(perfectNum(ar[i])!=0)
+			{
+				count++;
+			}
+			
+		}if(count==ar.length)
+		{
+			System.out.println("The given array elements are all number perfect numbers");
+		}else
+		{
+			System.out.println("no");
+		}
+	}
+
+	private int perfectNum(int num) {
+		// TODO Auto-generated method stub
+		int div=1;
+		int givnum=num;
+		int  num2=0;
+		while(num>div)
+		{
+			if(num%div==0)
+			{
+				num2=num2+div;
+				
+			}div=div+1;
+		}
+		if(givnum==num2)
+			{
+			//System.out.println(num+" is perfect  number");
+			return num;
+			}
+		return 0;
+//		else {
+				//System.out.println(num+" is not perfect number ");
+			}
+	
+
+	private void printallnumberisPrimeNumGivenArray() {
+		// TODO Auto-generated method stub
+       int[] ar= {1,2,3,4,6,8,9,30,5,45};
+		int len= ar.length;
+		System.out.println(len);
+		int count1=0;
+		
+		for(int i=0;i<ar.length;i++)
+		{
+			primeNumber(ar[i]);
+			count1=count1+1;
+		}
+		System.out.println(count1 + "is given array");
+		if(count1==len)
+		{
+			System.out.println("The given array element all is prime number");
+		}else
+			System.out.println("The given array element is not all prime Number ");
+	}
+
+	private void printPrimeNumIngivenArray() {
+		// TODO Auto-generated method stub
+		int[] ar= {1,2,3,4,6,8,9,30,5,45};
+		int i;
+		for( i=0;i<ar.length;i++)
+		{
+		int result=primeNumber(ar[i]);
+		
+		}
+	}
+
+	private int primeNumber(int no) {
+		// TODO Auto-generated method stub
+		int div=2;
+		int count=0;
+		while(div<no)
+		{
+			if(no%div==0)
+			{
+				count++;
+			}div++;
+		}if(count==0)
+		{
+			System.out.println(no + "is prime number");
+			
+			
+		}return no;
+	}
+
+	private void even_numbersgivenArray() {
+		// TODO Auto-generated method stub
+		int[] ar= {5,6,7,8,9,10,12,15,17,20};
+		int count=0;
+		for(int i=0;i<ar.length;i++)
+		{
+			if(ar[i]%2==0)
+			{
+				count++;
+			}
+		}
+		int[] even_count=new int[count];
+		int j=0;
+		for(int i=0;i<ar.length;i++)
+		{
+			if(ar[i]%2==0)
+			{
+				even_count[j]=ar[i];
+				System.out.println(even_count[j]);
+				j++;
+			}
+		}
+	}
+
+	private void odd_numbersGivenArray() {
+		// TODO Auto-generated method stub
+		int[] ar= {5,6,7,8,9,10};
+		          //0 1 2 3 4 5
+		int count=0;
+		for(int i=0;i<ar.length;i++)
+		{
+			if(ar[i]%2!=0)
+			{
+				count++;
+			}
+		}int[] odd_arr=new int[count];
+		  int j=0;
+		  int[] ar1 = {5,6,7,8,9,10};
+		  for(int i=0;i<ar.length;i++)
+		  {
+			  if(ar[i]%2!=0)
+			  {
+				  odd_arr[j]=ar1[i];
+				  System.out.println(odd_arr[j]);
+				  j++;
+			  }
+		  }
+		
+	}
+
+	private void wrapper_class_methods() {
+		// TODO Auto-generated method stub
+		int no=5;
+		Integer i = no;
+		Float f= i.floatValue();
+		System.out.println(f);
+		int max= Integer.MAX_VALUE;//static final value
+		int min=Integer.MIN_VALUE;
+		System.out.println(max);
+		System.out.println(min);
+		int com=Integer.compare(max, min);
+	}
+
+	private void first_2_big_number() {
+		// TODO Auto-generated method stub
+		int[] ar = {87,89,90,88,92};
+		int first = Integer.MIN_VALUE, second = Integer.MIN_VALUE; 
+		for(int i=1; i<ar.length; i++)
+		{
+		if(ar[i]>first)//89>87,90>89==
+		    {
+		    second = first; //87
+		    first = ar[i];//89
+		    }
+		else if(ar[i]>second)//
+		    {
+		    second = ar[i]; //
+		    }
+		}
+		System.out.println(first); 
+		System.out.println(second); 
+		
 	}
 
 	private void sumOf2Elementsincorrespondingarray10() {
